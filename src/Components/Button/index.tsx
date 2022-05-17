@@ -4,19 +4,19 @@ import {
 } from 'react-native';
 import {style} from './style'
 
-const Box : React.FC<{
+const Button : React.FC<{
     customStyle:any,
-    icon:any,
+    title:string,
     onPress:any
 }> = (prop) => {
  
   return (
       <TouchableOpacity style={[style.box, prop.customStyle]} onPress={prop.onPress}>
-          {prop?.icon && <Image source={prop.icon} style={style.image}/>}
+          <Text style={style.text}>{prop.title}</Text>
           </TouchableOpacity>
   );
 };
 
 
-export default Box;
+export default Button;
 
